@@ -1,0 +1,176 @@
+/* section section design  */
+@media (min-width: 1024px) {
+  .diagonal-clip {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  }
+}
+
+/* splide arrow  */
+/* @media (min-width: 1875px) {
+  
+.splide__arrow--prev {
+    left: -4em !important; 
+    height: 50px !important;
+    width: 50px !important;
+    background-color: white !important;
+    border: 1px solid rgb(148, 142, 142) !important;
+}
+.splide__arrow--next {
+      height: 50px !important;
+    width: 50px !important;
+    right: -4em !important; 
+    background-color: white !important;
+    border: 1px solid rgb(148, 142, 142) !important;
+
+}
+} */
+
+/* card image design */
+.diagonal-clip-two {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.diagonal-clip-three {
+  clip-path: polygon(10% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+/* h2 design */
+h2 .image-text {
+  background-image: url('assets/images/6.jpg');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+}
+
+/* clip path design */
+.custom-clip {
+  clip-path: polygon(45% 1.33975%, 46.5798% 0.60307%, 48.26352% 0.15192%, 50% 0%, 51.73648% 0.15192%,
+      53.4202% 0.60307%, 55% 1.33975%, 89.64102% 21.33975%, 91.06889% 22.33956%,
+      92.30146% 23.57212%, 93.30127% 25%, 94.03794% 26.5798%, 94.48909% 28.26352%,
+      94.64102% 30%, 94.64102% 70%, 94.48909% 71.73648%, 94.03794% 73.4202%,
+      93.30127% 75%, 92.30146% 76.42788%, 91.06889% 77.66044%, 89.64102% 78.66025%,
+      55% 98.66025%, 53.4202% 99.39693%, 51.73648% 99.84808%, 50% 100%,
+      48.26352% 99.84808%, 46.5798% 99.39693%, 45% 98.66025%, 10.35898% 78.66025%,
+      8.93111% 77.66044%, 7.69854% 76.42788%, 6.69873% 75%, 5.96206% 73.4202%,
+      5.51091% 71.73648%, 5.35898% 70%, 5.35898% 30%, 5.51091% 28.26352%,
+      5.96206% 26.5798%, 6.69873% 25%, 7.69854% 23.57212%, 8.93111% 22.33956%,
+      10.35898% 21.33975%);
+}
+
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .py-custom {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .py-custom {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+}
+
+#grad1 {
+
+  height: 1000px;
+  background: linear-gradient(to bottom, #0e2364 65%, #eff6fe 0%) !important;
+
+}
+
+/* .splide__arrow {
+  background-color: #ffffff !important;
+  color: white !important;
+  border-radius: 50% !important;
+  width: 58px !important;
+  height: 58px !important;
+  font-size: 20px !important;
+}
+
+.splide__arrow--prev {
+  left: -13rem !important;
+  border: solid 1px rgb(61, 59, 59) !important;
+}
+
+.splide__arrow--next {
+  right: -13rem !important;
+  border: solid 1px rgb(61, 59, 59) !important;
+} */
+
+.banner-first .splide__arrow {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+  font-size: 13px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+  /* prevent clicking when hidden */
+}
+
+/* Hide default arrow icon */
+.banner-first .splide__arrow::after {
+  display: none;
+}
+
+/* Left arrow off-screen (before hover) */
+.banner-first .splide__arrow--prev {
+  left: 30px;
+  transform: translate(-20px, -50%);
+}
+
+/* Right arrow off-screen (before hover) */
+.banner-first .splide__arrow--next {
+  right: 30px;
+  transform: translate(20px, -50%);
+}
+
+/* On hover, fade in and slide arrows into place */
+.banner-first:hover .splide__arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.banner-first:hover .splide__arrow--prev {
+  transform: translate(0, -50%);
+}
+
+.banner-first:hover .splide__arrow--next {
+  transform: translate(0, -50%);
+}
+
+footer.footer-style-two .f-item.about {
+  position: relative;
+  z-index: 1;
+  padding-right: 50px;
+}
+
+.theme-before {
+  position: relative;
+}
+
+.theme-before .about::after {
+  position: absolute;
+  right: 1275px;
+  top: 0px;
+  bottom: 0px;
+  width: 500%;
+  content: "";
+  opacity: 0.5;
+  background: linear-gradient(0deg, #04297a 0%, #28048b 100%);
+}
+.bg-set{
+  background: linear-gradient(0deg, #04297a 0%, #28048b 100%);
+}
