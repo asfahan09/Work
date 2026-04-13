@@ -1,0 +1,1204 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d;
+      }
+      
+      
+    </style>
+
+</head>
+
+<body class="bg-[#141416] text-white">
+    <div class="relative">
+        <div class="fixed right-2 top-1/2 z-99">
+            <div aria-label="theme switcher"
+                class="grid h-12 w-12 cursor-pointer place-items-center rounded bg-[#b91202] p-0 text-white hover:bg-red-600"
+                type="button" id="radix-:R19la:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 20v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 17.66 1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66-1.41 1.41"></path>
+                    <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg><span class="sr-only">Toggle theme</span></div>
+        </div>
+        <button aria-label="Scroll to top"
+            class="group fixed bottom-[30px] right-[50px] z-444 grid h-[50px] w-[50px] place-items-center rounded-5 bg-[#b91202] text-[18px] text-white [transition:1s_ease] hover:bg-red-600 focus-visible:outline-0 opacity-100">
+            <a href="#top">
+                <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96-43 96-96l0-306.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 416c0 17.7-14.3 32-32 32l-96 0z">
+                    </path>
+                </svg>
+            </a>
+        </button>
+        <header class="left-0 right-0 top-0 z-99 mx-auto  w-full lg:block absolute pt-30px">
+
+            <!-- for md navbar -->
+            <section>
+                <div class="block lg:hidden ">
+                    <nav class="bg-set-0 border-gray-800">
+                        <div
+                            class="max-w-screen-xl flex border-b-1 border-grey-800 items-center justify-between mx-auto p-4">
+                            <!-- Logo -->
+                            <a href="index.html" class="flex items-center space-x-3">
+                                <img src="assets/images/logo.webp" class="h-15" alt="Logo" />
+                            </a>
+
+                            <!-- Toggle Button -->
+                            <button data-collapse-toggle="navbar-dropdown" type="button"
+                                data-drawer-target="drawer-example-1" data-drawer-show="drawer-example-1"
+                                aria-controls="drawer-example-1"
+                                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#b91202] rounded-lg hover:bg-gray-100 focus:outline-none"
+                                aria-controls="navbar-dropdown" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 17 14"
+                                    aria-hidden="true">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                                </svg>
+                            </button>
+
+
+                            <!-- drawer init and toggle -->
+
+
+                            <!-- drawer component -->
+                            <div id="drawer-example-1"
+                                class="fixed top-0 left-0 z-40 h-screen  p-4 overflow-y-auto transition-transform -translate-x-full bg-black "
+                                tabindex="-1" aria-labelledby="drawer-label" style="width:250px;">
+                                <h5 id="drawer-label"
+                                    class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
+                                    <img src="assets/images/logo.webp" class="" alt="">
+                                </h5>
+                                <button type="button" data-drawer-hide="drawer-example-1" aria-controls="drawer-example"
+                                    class="text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <svg fill="grey" class="h-9" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 384 512">
+                                        <path
+                                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                    </svg>
+                                    <span class="sr-only">Close menu</span>
+                                </button>
+                                <div class="">
+                                    <ul>
+                                        <li>
+
+                                            <div id="accordion-collapse" data-accordion="collapse"
+                                                class="bg-black text-white w-full">
+
+                                                <!-- Home -->
+                                                <h2>
+                                                    <button type="button"
+                                                        class="flex items-center justify-between w-full px-4 py-3 font-semibold border-b border-white"
+                                                        aria-expanded="false">
+                                                        <a href="index.html">
+                                                            <span>Home</span>
+                                                        </a>
+                                                    </button>
+                                                </h2>
+
+                                                <!-- About -->
+                                                <h2>
+                                                    <button type="button"
+                                                        class="flex items-center justify-between w-full px-4 py-3 font-semibold border-b border-white"
+                                                        aria-expanded="false">
+                                                        <a href="About.html">
+                                                            <span>About</span>
+                                                        </a>
+                                                    </button>
+                                                </h2>
+
+                                                <!-- Service (Dropdown) -->
+                                                <h2 id="accordion-service">
+                                                    <button type="button"
+                                                        class="flex items-center justify-between w-full px-4 py-3 font-semibold border-b border-white"
+                                                        data-accordion-target="#body-service" aria-expanded="false"
+                                                        aria-controls="body-service">
+                                                        <span>Service</span>
+                                                        <svg data-accordion-icon
+                                                            class="w-4 h-4 transition-transform duration-200"
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 10 6">
+                                                            <path stroke="currentColor" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-width="2"
+                                                                d="M1 1l4 4 4-4" />
+                                                        </svg>
+                                                    </button>
+                                                </h2>
+                                                <div id="body-service" class="hidden"
+                                                    aria-labelledby="accordion-service">
+                                                    <div class="px-6 py-4 text-gray-300">
+                                                        <a href="servicelist.html">
+                                                            <p>Service List</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="px-6 py-4 text-gray-300">
+
+                                                        <a href="servicesingle.html">
+                                                            <p>Service Single</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Blog (Dropdown) -->
+                                                <h2 id="accordion-blog">
+                                                    <button type="button"
+                                                        class="flex items-center justify-between w-full px-4 py-3 font-semibold border-b border-white"
+                                                        data-accordion-target="#body-blog" aria-expanded="false"
+                                                        aria-controls="body-blog">
+                                                        <span>Blog</span>
+                                                        <svg data-accordion-icon
+                                                            class="w-4 h-4 transition-transform duration-200"
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 10 6">
+                                                            <path stroke="currentColor" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-width="2"
+                                                                d="M1 1l4 4 4-4" />
+                                                        </svg>
+                                                    </button>
+                                                </h2>
+                                                <div id="body-blog" class="hidden" aria-labelledby="accordion-blog">
+                                                    <div class="px-6 py-4 text-gray-300">
+                                                        <a href="BlogList.html">
+                                                            <p>Blog List</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="px-6 py-4 text-gray-300">
+
+                                                        <a href="BlogSingle.html">
+                                                            <p>Blog Single</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Project (Dropdown) -->
+                                                <h2 id="accordion-project">
+                                                    <button type="button"
+                                                        class="flex items-center justify-between w-full px-4 py-3 font-semibold border-b border-white"
+                                                        data-accordion-target="#body-project" aria-expanded="false"
+                                                        aria-controls="body-project">
+                                                        <span>Project</span>
+                                                        <svg data-accordion-icon
+                                                            class="w-4 h-4 transition-transform duration-200"
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 10 6">
+                                                            <path stroke="currentColor" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-width="2"
+                                                                d="M1 1l4 4 4-4" />
+                                                        </svg>
+                                                    </button>
+                                                </h2>
+                                                <div id="body-project" class="hidden"
+                                                    aria-labelledby="accordion-project">
+                                                    <div class="px-6 py-4 text-gray-300">
+                                                        <a href="projectList.html">
+                                                            <p>project List</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="px-6 py-4 text-gray-300">
+
+                                                        <a href="projectSingle.html">
+                                                            <p>project Single</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Contact -->
+                                                <h2>
+                                                    <button type="button"
+                                                        class="flex items-center justify-between w-full px-4 py-3 font-semibold border-b border-white">
+                                                        <a href="contact.html">
+                                                            <span>Contact</span>
+                                                        </a>
+                                                    </button>
+                                                </h2>
+
+                                                <!-- Pages (Dropdown) -->
+                                                <h2 id="accordion-pages">
+                                                    <button type="button"
+                                                        class="flex items-center justify-between w-full px-4 py-3 font-semibold border-b border-white"
+                                                        data-accordion-target="#body-pages" aria-expanded="false"
+                                                        aria-controls="body-pages">
+                                                        <span>Pages</span>
+                                                        <svg data-accordion-icon
+                                                            class="w-4 h-4 transition-transform duration-200"
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 10 6">
+                                                            <path stroke="currentColor" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-width="2"
+                                                                d="M1 1l4 4 4-4" />
+                                                        </svg>
+                                                    </button>
+                                                </h2>
+                                                <div id="body-pages" class="hidden" aria-labelledby="accordion-pages">
+                                                    <div class="px-6 py-4 text-gray-300">
+                                                        <p>Page One</p>
+                                                        <p>Page Two</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                </div>
+
+                                <div class="">
+                                    <h3 class="text-1xl font-bold  mt-4">CONTACT INFO</h3>
+                                    <p class="custom-borders mt-4 mb-4"></p>
+
+                                    <div class="flex items-center py-2">
+                                        <i class="fa-solid fa-phone" style="color: rgb(184, 10, 10);"></i>
+                                        <p class="ml-3">031245645</p>
+                                    </div>
+                                    <div class="flex items-center py-2">
+                                        <i class="fa-solid fa-envelope" style="color: rgb(184, 10, 10);"></i>
+                                        <p class="ml-3">hotmail@gmail.com</p>
+                                    </div>
+                                    <div class="flex items-center py-2">
+                                        <i class="fa-solid fa-location-dot" style="color: rgb(184, 10, 10);"></i>
+                                        <p class="ml-3">USA Ohio</p>
+                                    </div>
+                                </div>
+                                <div class="socail flex items-center gap-2 py-4">
+                                    <div class="p-2 rounded-full aspect-square flex justify-center items-center"
+                                        style="background-color: #353535; width: 35px; height: 35px;">
+                                        <a href="#"
+                                            class="d-inline-flex text-decoration-none align-items-center justify-content-center  text-white rounded-circle"
+                                            style="width: 25px; height: 20px;">
+                                            <i class="fa-brands fa-facebook-f ml-1"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 rounded-full aspect-square flex justify-center items-center"
+                                        style="background-color: #353535; width: 35px; height: 35px;">
+                                        <a href="#"
+                                            class="d-inline-flex text-decoration-none align-items-center justify-content-center  text-white rounded-circle"
+                                            style="width: 25px; height: 20px;">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 rounded-full aspect-square flex justify-center items-center"
+                                        style="background-color: #353535; width: 35px; height: 35px;">
+                                        <a href="#"
+                                            class="d-inline-flex text-decoration-none align-items-center justify-content-center  text-white rounded-circle"
+                                            style="width: 25px; height: 20px;">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 rounded-full aspect-square flex justify-center items-center"
+                                        style="background-color: #353535;  width: 35px; height: 35px;">
+                                        <a href="#" class="text-white">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+            </section>
+            <!-- end for md navbar -->
+            <!-- Left: Logo -->
+            <div class="flex container  mx-auto w-full max-w-[1322px] h-[133px] px-4 ">
+
+
+                <div class="bg-set-1 flex items-center content-center mt-5 hidden lg:block" style="width:221px;">
+                    <a href="index.html" class="text-xl font-bold flex justify-center p-4">
+                        <img src="assets/images/logo.webp" class="flex justify-center" alt="">
+                    </a>
+                </div>
+
+                <nav class="bg-[#1A1A1C] text-white w-full mt-5 hidden lg:block ">
+                    <div class="container mx-auto">
+                        <div class="flex items-center justify-between ms-5 ">
+                            <div class="flex gap-5 px-4">
+                                <div class="flex items-center py-2">
+                                    <i class="fa-solid fa-phone" style="color: rgb(184, 10, 10);"></i>
+                                    <p class="ml-3 text-gray-300">(629) 555-0129</p>
+                                </div>
+                                <div class="flex items-center py-2">
+                                    <i class="fa-solid fa-envelope" style="color: rgb(184, 10, 10);"></i>
+                                    <p class="ml-3 text-gray-300">hotmail@gmail.com</p>
+                                </div>
+                                <div class=" flex items-center py-2">
+                                    <!-- <i class="fa-solid fa-location-dot" style="color: rgb(184, 10, 10);"></i> -->
+                                    <svg stroke="currentColor" fill="red" stroke-width="0" viewBox="0 0 512 512"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z">
+                                        </path>
+                                    </svg>
+                                    <p class="ml-3 text-gray-300">USA Ohio</p>
+                                </div>
+                            </div>
+                            <div class=" parent-div">
+
+                                <!-- Right: Icon & Menu Toggle -->
+                                <div class="flex items-center space-x-4 ">
+                                    <button
+                                        class="relative z-[2] text-white  text-base leading-[1.1] font-bold font-secondary  uppercase  inline-flex items-center justify-center gap-3 md:min-h-[3.75rem] min-h-[3.5rem] px-6 md:px-7 py-2 md:py-3 ring-offset-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#b91202] after:absolute after:h-full after:w-0 after:bottom-0 after:right-0 after:bg-black/[.15] after:-z-1 after:[transition:all_.3s_ease-in-out] hover:text-white dark:hover:text-white hover:after:w-full hover:after:left-0  ">GET
+                                        A
+                                        QUOTE<i class="fa-solid fa-arrow-right ms-3"></i></button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="border-b px-0"></p>
+                    <div class="container mx-auto row flex items-center justify-between py-4 px-4 ms-5">
+
+                        <div class="parent-div">
+
+                            <!-- Center: Menu (hidden on small screens) -->
+                            <div class="hidden md:flex space-x-4 gap-4" id="menu">
+                                <a href="index.html"
+                                    class=" hover:text-[#b91202] transition-colors duration-200 font-medium ">Home</a>
+
+                                <a href="About.html"
+                                    class="text-white hover:text-[#b91202] transition-colors duration-200">About</a>
+
+                                <li class="group/menu-item relative  list-none">
+                                    <span
+                                        class="group-hover/menu-item:text-primary  leading-[1.3]   font-medium text-accent-900 dark:hover:text-[#b91202] hover:text-primary transition-colors duration-200 inline-flex items-center justify-center gap-1.5  menu-link cursor-pointer">
+                                        <span>Service</span>
+                                        <span class="text-[10px]">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    <nav aria-label="sumenu-items"
+                                        class="absolute left-0 top-full z-40 w-[230px] overflow-hidden  origin-[0_0_0] scale-y-0 transition-transform duration-350 group-hover/menu-item:scale-y-100">
+                                        <ul class="grid divide-y divide-white/5 mt-2 bg-black">
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] items-center bg-[#141416] px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202] "
+                                                    href="servicelist.html">Service List</a></li>
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202]  dark:text-white"
+                                                    href="servicesingle.html">Service single</a></li>
+                                        </ul>
+                                    </nav>
+                                </li>
+
+
+                                <li class="group/menu-item relative  list-none">
+                                    <span
+                                        class="group-hover/menu-item:text-primary  leading-[1.3]   font-medium text-accent-900 dark:hover:text-[#b91202] hover:text-primary transition-colors duration-200 inline-flex items-center justify-center gap-1.5  menu-link cursor-pointer">
+                                        <span>Project</span>
+                                        <span class="text-[10px]">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    <nav aria-label="sumenu-items"
+                                        class="absolute left-0 top-full z-40 w-[230px] overflow-hidden bg-accent-700 shadow-lg origin-[0_0_0] scale-y-0 transition-transform duration-350 group-hover/menu-item:scale-y-100">
+                                        <ul class="grid divide-y divide-white/5 mt-2">
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202] dark:text-white"
+                                                    href="projectList.html">project List</a></li>
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202]  dark:text-white"
+                                                    href="projectSingle.html">project single</a></li>
+                                        </ul>
+                                    </nav>
+                                </li>
+                                <li class="group/menu-item relative  list-none">
+                                    <span
+                                        class="group-hover/menu-item:text-primary  leading-[1.3]   font-medium text-accent-900 dark:hover:text-[#b91202] hover:text-primary transition-colors duration-200 inline-flex items-center justify-center gap-1.5  menu-link cursor-pointer">
+                                        <span>Blogs</span>
+                                        <span class="text-[10px]">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    <nav aria-label="sumenu-items"
+                                        class="absolute left-0 top-full z-40 w-[230px] overflow-hidden bg-accent-700 shadow-lg origin-[0_0_0] scale-y-0 transition-transform duration-350 group-hover/menu-item:scale-y-100">
+                                        <ul class="grid divide-y divide-white/5 mt-2">
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202] dark:text-white"
+                                                    href="BlogList.html">Blog List</a></li>
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202]  dark:text-white"
+                                                    href="BlogSingle.html">Blog single</a></li>
+                                        </ul>
+                                    </nav>
+                                </li>
+                                <li class="group/menu-item relative  list-none">
+                                    <span
+                                        class="group-hover/menu-item:text-primary  leading-[1.3]   font-medium text-accent-900 dark:hover:text-[#b91202] hover:text-primary transition-colors duration-200 inline-flex items-center justify-center gap-1.5  menu-link cursor-pointer">
+                                        <span>Pages</span>
+                                        <span class="text-[10px]">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 512 512" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    <nav aria-label="sumenu-items"
+                                        class="absolute left-0 top-full z-40 w-[230px] overflow-hidden bg-accent-700 shadow-lg origin-[0_0_0] scale-y-0 transition-transform duration-350 group-hover/menu-item:scale-y-100">
+                                        <ul class="grid divide-y divide-white/5 mt-2">
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202] dark:text-white"
+                                                    href="Testimonial.html">Testimonial</a></li>
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202]  dark:text-white"
+                                                    href="Team.html">Team</a></li>
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202]  dark:text-white"
+                                                    href="Pricing.html">pricing</a></li>
+                                            <li class="leading-none"><a target="_self"
+                                                    class="flex min-h-[50px] bg-[#141416]  items-center px-4 py-2 pr-6 text-[15px] font-normal capitalize text-white transition-colors duration-200 hover:bg-[#b91202]  dark:text-white"
+                                                    href="Faq.html">FAQ</a></li>
+                                        </ul>
+                                    </nav>
+                                </li>
+                                <a href="contact.html"
+                                    class="hover:text-[#b91202] transition-colors duration-200 font-medium">Contact</a>
+                            </div>
+
+
+                        </div>
+                        <div class="parent-div">
+
+                            <!-- Right: Icon & Menu Toggle -->
+                            <div class="flex items-center space-x-4 me-5">
+                                <!-- Search Icon -->
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-cart-shopping"></i>
+
+                                <!-- Mobile menu button -->
+                                <button class="block md:hidden" id="menuToggle">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                </button>
+
+                                <svg data-drawer-target="drawer-example" data-drawer-show="drawer-example"
+                                    aria-controls="drawer-example" width="31" height="24" viewBox="0 0 31 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="0.0234375" y1="12" x2="30.0234" y2="12" stroke="currentColor"
+                                        stroke-width="3"></line>
+                                    <path d="M5.02344 22H30.0234" stroke="currentColor" stroke-width="3"></path>
+                                    <path d="M10.0234 2H30.0234" stroke="currentColor" stroke-width="3"></path>
+                                </svg>
+                            </div>
+
+                            <!-- drawer component -->
+                            <div id="drawer-example"
+                                class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-black "
+                                tabindex="-1" aria-labelledby="drawer-label" style="width: 384px;">
+                                <h5 id="drawer-label"
+                                    class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
+                                    <img src="assets/images/logo.webp" class="" alt="">
+                                </h5>
+                                <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example"
+                                    class="text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <svg fill="grey" class="h-9" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 384 512">
+                                        <path
+                                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                    </svg>
+                                    <span class="sr-only">Close menu</span>
+                                </button>
+                                <div class="">
+                                    <h3 class="text-1xl font-bold  ">ABOUT US</h3>
+                                    <p class="custom-borders mt-4"></p>
+                                    <p class="mb-6 text-md text-gray-500 dark:text-gray-400 mt-4">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                        roots
+                                        in a
+                                        piece
+                                        of classical Latin literature from 45 BC, making it over 2000 years old.
+                                    </p>
+                                </div>
+                                <div class="">
+                                    <h3 class="text-1xl font-bold ">GET A FREE QUOTE</h3>
+                                    <p class="custom-borders mt-4"></p>
+
+
+                                    <input class="w-full rounded mt-4  p-3 bg-[#1A1A1C]" type="text" name="name"
+                                        placeholder="Your Name">
+                                    <input class="w-full rounded mt-4 p-3 bg-[#1A1A1C]" type="email" name="email"
+                                        placeholder="Your Email">
+                                    <input class="w-full rounded mt-4  p-3 bg-[#1A1A1C]" type="text" name="sub"
+                                        placeholder="Your Subject">
+                                    <textarea name="sub" placeholder="Your Message"
+                                        class="w-full rounded mt-4  text-white p-3 bg-[#1A1A1C]" rows="4">
+                                    </textarea>
+                                    <div class="btn mt-3">
+                                        <button class="bg-red-600 p-4 rounded w-full font-bold">SEND NOW</button>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h3 class="text-1xl font-bold  mt-4">CONTACT INFO</h3>
+                                    <p class="custom-borders mt-4 mb-4"></p>
+
+                                    <div class="flex items-center py-2">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <p class="ml-3">031245645</p>
+                                    </div>
+                                    <div class="flex items-center py-2">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <p class="ml-3">hotmail@gmail.com</p>
+                                    </div>
+                                    <div class="flex items-center py-2">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <p class="ml-3">USA Ohio</p>
+                                    </div>
+                                </div>
+                                <div class="socail flex items-center gap-2 py-4">
+                                    <div class="p-2 rounded-full  aspect-square flex justify-center items-center"
+                                        style="background-color: #353535; width: 35px; height: 35px;">
+                                        <a href="#"
+                                            class="d-inline-flex text-decoration-none align-items-center justify-content-center  text-white rounded-circle"
+                                            style="width: 25px; height: 20px;">
+                                            <i class="fa-brands fa-facebook-f ml-1"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 rounded-full aspect-square flex justify-center items-center"
+                                        style="background-color: #353535; width: 35px; height: 35px;">
+                                        <a href="#"
+                                            class="d-inline-flex text-decoration-none align-items-center justify-content-center  text-white rounded-circle"
+                                            style="width: 25px; height: 20px;">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 rounded-full aspect-square flex justify-center items-center"
+                                        style="background-color: #353535; width: 35px; height: 35px;">
+                                        <a href="#"
+                                            class="d-inline-flex text-decoration-none align-items-center justify-content-center  text-white rounded-circle"
+                                            style="width: 25px; height: 20px;">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 rounded-full aspect-square flex justify-center items-center"
+                                        style="background-color: #353535;  width: 35px; height: 35px;">
+                                        <a href="#" class="text-white">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </nav>
+            </div>
+
+        </header>
+
+        <main class="">
+            <!-- section 1  -->
+            <section class="section-padding-primary relative flex min-h-[450px] items-center ">
+                <div class=" bg-[#141416]">
+                    <img alt="techlab banner" fetchpriority="high" decoding="async" data-nimg="fill"
+                        class="pointer-events-none object-cover opacity-35"
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                        sizes="100vw" srcset="assets/images/hero-3.webp" src="assets/images/hero-3.webp" />
+
+                    <!-- Bottom Gradient Overlay -->
+                    <span class="absolute inset-0 bg-gradient-to-t from-[#141416] via-black/5 to-transparent"></span>
+                </div>
+
+
+
+                <div class=" container  mx-auto w-full max-w-[1322px]  px-4">
+                    <div
+                        class="relative z-[4] flex  flex-col lg:flex-row items-center justify-between gap-x-20 gap-y-8 text-accent-900 dark:text-white lg:pt-[137px]">
+                        <h1 class=" text-3xl font-bold ">Service Detail</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="inline-flex items-center gap-3 md:gap-5">
+                                <li class=" font-bold"><a target="_self"
+                                        class=" hover:text-[#b91202] font-bold text-3xl" href="index.html">Home</a><span
+                                        class="ml-3 md:ml-5">/</span></li>
+                                <li class="hover:text-[#b91202] font-bold text-3xl" aria-current="page">Service</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <!-- section 1 -->
+            <!-- section 2  -->
+            <section>
+                <div class="container mx-auto w-full max-w-[1322px] px-4 mt-20">
+                    <div class="grid grid-cols-12 gap-6">
+
+                        <div class="col-span-12 md:col-span-4 p-6 rounded">
+
+                            <div class="grid gap-6 rounded-5 bg-[#1A1A1C] px-5 py-5 py-30px d">
+                                <h3 class="h3 text-[24px] font-medium dark:text-white">Our Service</h3>
+                                <ul class="grid gap-3" aria-label="service list">
+                                    <li><a target="_self"
+                                            class="flex items-center justify-between gap-4 transition-colors duration-300 hover:text-[#b91202]"
+                                            href="/"><span class="flex-1 hover:text-[#b91202]">AI Insights
+                                                Pro</span><svg width="22" height="7" viewBox="0 0 22 7" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="4.37114e-08" y1="3.5" x2="20" y2="3.5" stroke="currentColor">
+                                                </line>
+                                                <path d="M19.5 1.68487L21.2965 3.5L19.5 5.31513L19.5 1.68487Z"
+                                                    fill="white" stroke="currentColor"></path>
+                                            </svg></a></li>
+                                    <li><a target="_self"
+                                            class="flex items-center justify-between gap-4 transition-colors duration-300 hover:text-[#b91202]"
+                                            href="/"><span class="flex-1 hover:text-[#b91202]">Tech Armor
+                                                Security</span><svg width="22" height="7" viewBox="0 0 22 7" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="4.37114e-08" y1="3.5" x2="20" y2="3.5" stroke="currentColor">
+                                                </line>
+                                                <path d="M19.5 1.68487L21.2965 3.5L19.5 5.31513L19.5 1.68487Z"
+                                                    fill="white" stroke="currentColor"></path>
+                                            </svg></a></li>
+                                    <li><a target="_self"
+                                            class="flex items-center justify-between gap-4 transition-colors duration-300 hover:text-[#b91202]"
+                                            href="/"><span class="flex-1 hover:text-[#b91202]">Blockchain
+                                                Forge</span><svg width="22" height="7" viewBox="0 0 22 7" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="4.37114e-08" y1="3.5" x2="20" y2="3.5" stroke="currentColor">
+                                                </line>
+                                                <path d="M19.5 1.68487L21.2965 3.5L19.5 5.31513L19.5 1.68487Z"
+                                                    fill="white" stroke="currentColor"></path>
+                                            </svg></a></li>
+                                    <li><a target="_self"
+                                            class="flex items-center justify-between gap-4 transition-colors duration-300 hover:text-[#b91202]"
+                                            href="/"><span class="flex-1 hover:text-[#b91202]">DigitalIQ
+                                                Consulting</span><svg width="22" height="7" viewBox="0 0 22 7"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="4.37114e-08" y1="3.5" x2="20" y2="3.5" stroke="currentColor">
+                                                </line>
+                                                <path d="M19.5 1.68487L21.2965 3.5L19.5 5.31513L19.5 1.68487Z"
+                                                    fill="white" stroke="currentColor"></path>
+                                            </svg></a></li>
+                                    <li><a target="_self"
+                                            class="flex items-center justify-between gap-4 transition-colors duration-300 hover:text-[#b91202]"
+                                            href="/"><span class="flex-1 hover:text-[#b91202]">RapidApp
+                                                Innovate</span><svg width="22" height="7" viewBox="0 0 22 7" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="4.37114e-08" y1="3.5" x2="20" y2="3.5" stroke="currentColor">
+                                                </line>
+                                                <path d="M19.5 1.68487L21.2965 3.5L19.5 5.31513L19.5 1.68487Z"
+                                                    fill="white" stroke="currentColor"></path>
+                                            </svg></a></li>
+                                    <li><a target="_self"
+                                            class="flex items-center justify-between gap-4 transition-colors duration-300 hover:text-[#b91202]"
+                                            href="/"><span class="flex-1 hover:text-[#b91202]">RoboLogic Labs</span><svg
+                                                width="22" height="7" viewBox="0 0 22 7" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <line x1="4.37114e-08" y1="3.5" x2="20" y2="3.5" stroke="currentColor">
+                                                </line>
+                                                <path d="M19.5 1.68487L21.2965 3.5L19.5 5.31513L19.5 1.68487Z"
+                                                    fill="white" stroke="currentColor"></path>
+                                            </svg></a></li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class=" mt-15 relative grid min-h-[410px] place-items-center overflow-hidden rounded-5 bg-accent-100 p-10 dark:bg-accent-700 
+    after:absolute after:inset-0 after:z-1 after:bg-black/60 
+    before:absolute before:inset-0 before:z-[2] before:[background:linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(185,18,2,0.7)_100%)]">
+
+                                <img data-nimg="fill" sizes="100vw" src="assets/images/about-5.webp"
+                                    style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                <div class="relative z-10 text-center text-white">
+                                    <span
+                                        class="inline-grid h-[68px] w-[68px] place-items-center rounded-full bg-[#b91202]  text-white">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 512 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <p class="mb-1 mt-6">Need help? contact our experts</p><a
+                                        class="font-secondary text-md font-bold  transition-colors duration-300"
+                                        href="tel:+0032-1255-69874">+0032-1255-69874</a>
+                                </div>
+                            </div>
+
+                            <div class="bg-[#1A1A1C] p-10 mt-20">
+                                <h3 class="h3 text-accent-700 dark:text-white text-[24px] font-medium">Search Service
+                                </h3>
+                                <span class="mb-7 mt-6 block h-0.5 w-[45px] bg-[#b91202]"></span>
+                                <div class="flex items-center gap-4">
+                                    <div class="relative w-full">
+                                        <input placeholder="Search..."
+                                            class="flex items-center min-h-[3.5rem] md:min-h-[3.75rem] w-full rounded-5 px-4 md:px-5 py-2 bg-transparent text-accent-800 placeholder:text-accent-800 dark:text-body dark:placeholder:text-body border border-solid border-gray-500 rounded border-opacity-20 dark:border-opacity-20 dark:border-accent-200 focus:border-accent-900 focus:ring-0 focus-visible:outline-0 focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-300 !min-h-[40px] !py-0"
+                                            name="sarch">
+                                    </div>
+                                    <button
+                                        class="relative z-[2] text-white rounded  overflow-hidden text-base leading-[1.1] font-bold  tracking-wide uppercase [transition:all_0.3s_linear] inline-flex items-center justify-center gap-3 md:min-h-[3.75rem] min-h-[3.5rem] px-6 md:px-7 py-2 md:py-3 transition-colors ease-in-out ring-offset-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#b91202] after:absolute after:h-full after:w-0 after:bottom-0 after:right-0 after:bg-black/[.15] after:-z-1 after:[transition:all_.3s_ease-in-out] hover:text-white dark:hover:text-white hover:after:w-full hover:after:left-0 rounded-5 !min-h-[40px]">
+                                        <span class="relative z-1">SEARCH</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="bg-[#1A1A1C] mt-20 ">
+                                <div class="p-10 ">
+                                    <p>
+                                        Aliquam eros justo, posuere loborti vive rra laoreet matti ullamc per posu ere
+                                        viverra .Aliquam os justo, posuere lobortis non, vive rra oreet augue mattis
+                                        ferment ullam corper viverra laoreet vive rra
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex mt-20">
+                                <div>
+                                    <img src="assets/images/avatar-1.png" alt="" class="w-[50] h-[50] rounded-full ">
+                                </div>
+
+                                <div class="ms-5">
+                                    <h1 class="font-medium text-[24px]">Darliana shimp</h1>
+                                    <p>managers</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-span-12 md:col-span-8 p-6 rounded">
+                            <img src="assets/images/13.webp" alt="" class="w-full">
+
+                            <div class="mt-10 text-grey-400">
+                                <p>Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam
+                                    eros justo, posuere lobortis non, viverra laoreet augue mattis start fermentum
+                                    ullamcor viverra laoreet By Admin . Creativity . 28th February 2022 . Leave a
+                                    comment viverra laoreet augue mattis start fermentum start fermentum ullamcor
+                                    laoreet augue mattis start fermentum ullamcor viverra laoreet.</p>
+                                <p class="mt-5">Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere
+                                    viverra .Aliquam eros justo, posuere lobortis non, viverra laoreet augue mattis
+                                    start fermentum ullamcor viverra laoreet By Admin . Creativity . 28th February 2022
+                                    . Leave a comment viverra laoreet augue mattis start fermentum start fermentum
+                                    ullamcor laoreet augue mattis start fermentum ullamcor viverra laoreet.</p>
+                            </div>
+
+
+                            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <img src="assets/images/12.webp" alt="" class="object-cover w-full h-full rounded">
+                                </div>
+
+                                <div class="grid gap-4">
+                                    <div class="grid gap-3">
+                                        <div class="flex items-center gap-4"><span
+                                                class="flex-none text-base/[1] text-primary"><svg stroke="currentColor"
+                                                    fill="red" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                                                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                                                    </path>
+                                                </svg></span>
+                                            <h3 class="flex-1 text-md font-bold text-accent-700 dark:text-white">Best
+                                                Emplementation</h3>
+                                        </div>
+                                        <p>ished fact that a reader will be distrol acted bioiiy desig ished fact that a
+                                            reader will acted bioiiy desig.</p>
+                                    </div>
+                                    <div class="grid gap-3">
+                                        <div class="flex items-center gap-4"><span
+                                                class="flex-none text-base/[1] text-primary"><svg stroke="currentColor"
+                                                    fill="red" stroke-width="0" viewBox="0 0 512 512" height="1em"
+                                                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z">
+                                                    </path>
+                                                </svg></span>
+                                            <h3 class="flex-1 text-md font-bold text-accent-700 dark:text-white">Best
+                                                Emplementation</h3>
+                                        </div>
+                                        <p>ished fact that a reader will be distrol acted bioiiy desig ished fact that a
+                                            reader will acted bioiiy desig.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="mt-10">
+                                <p>Aliquam eros justo, posuere loborti viverra lao ullamcorper posuere viverra .Aliquam
+                                    eros justo, posuere lobortis non, viverra laoreet augue mattis start fermentum
+                                    ullamcor viverra laoreet By Admin . Creativity . 28th February 2022 . Leave a
+                                    comment viverra laoreet augue mattis start fermentum start fermentum</p>
+                            </div>
+
+                            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+
+
+                                <div class="grid gap-10">
+                                    <div class="grid gap-3">
+                                        <div class="flex items-center gap-4">
+                                            <h3 class="flex-1 text-md font-bold text-accent-700 dark:text-white">Best
+                                                Emplementation</h3>
+                                        </div>
+                                        <p>ished fact that a reader will be distrol acted bioiiy desig ished fact that a
+                                            reader will acted bioiiy desig.</p>
+                                    </div>
+                                    <div class="grid gap-3">
+                                        <div class="flex items-center gap-4">
+                                            <h3 class="flex-1 text-md font-bold text-accent-700 dark:text-white">Best
+                                                Emplementation</h3>
+                                        </div>
+                                        <p>ished fact that a reader will be distrol acted bioiiy desig ished fact that a
+                                            reader will acted bioiiy desig.</p>
+                                    </div>
+                                    <div class="grid gap-3">
+                                        <div class="flex items-center gap-4">
+                                            <h3 class="flex-1 text-md font-bold text-accent-700 dark:text-white">Best
+                                                Emplementation</h3>
+                                        </div>
+                                        <p>ished fact that a reader will be distrol acted bioiiy desig ished fact that a
+                                            reader will acted bioiiy desig.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <img src="assets/images/12.webp" alt="" class="object-cover w-full h-full rounded">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </section>
+            <!-- section 2 -->
+            <!-- footer -->
+           <footer>
+                <div class="container mx-auto w-full max-w-[1322px]  px-4 mt-10  ">
+                    <div class="flex justify-between flex-col lg:flex-row  border-b-1 border-gray-700">
+                        <div>
+                            <img src="assets/images/logo.webp" alt="">
+                        </div>
+
+                        <div>
+                            <nav aria-label="social links">
+                                <ul class="inline-flex items-center gap-2.5">
+                                    <li>
+                                        <a target="_blank" aria-label="https://www.facebook.com/"
+                                            class="text-base/[1] transition-all duration-350 hover:-translate-y-1 w-30px h-30px rounded-5 grid place-items-center rounded  hover:bg-[#b91202] bg-[#6166701A]  p-2 "
+                                            href="https://www.facebook.com/">
+                                            <span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 320 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a target="_blank" aria-label="https://www.facebook.com/"
+                                            class="text-base/[1] transition-all duration-350 hover:-translate-y-1 w-30px h-30px rounded-5 grid place-items-center rounded hover:bg-[#b91202] bg-[#6166701A]  p-2 "
+                                            href="https://www.facebook.com/">
+                                            <span>
+                                                <svg stroke="currentColor" fill="white" stroke-width="0"
+                                                    viewBox="0 0 448 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a target="_blank" aria-label="https://www.facebook.com/"
+                                            class="text-base/[1] transition-all duration-350 hover:-translate-y-1 w-30px h-30px rounded-5 grid rounded place-items-center hover:bg-[#b91202] bg-[#6166701A]  p-2 "
+                                            href="https://www.facebook.com/">
+                                            <span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 512 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a target="_blank" aria-label="https://www.facebook.com/"
+                                            class="text-base/[1] transition-all duration-350 hover:-translate-y-1 w-30px h-30px rounded rounded-5 grid place-items-center hover:bg-[#b91202] bg-[#6166701A]  p-2 "
+                                            href="https://www.facebook.com/">
+                                            <span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                    viewBox="0 0 448 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5 gap-10">
+                        <div>
+                            <h2 class="text-2xl font-bold mt-7">Quick Links</h2>
+                            <ul class="mt-10 text-gray-300">
+                                <a href="">
+                                    <li class="hover:text-white duration-300">Home</li>
+                                </a>
+                                <a href="">
+                                    <li class="mt-3 hover:text-white duration-300">About us</li>
+                                </a>
+                                <a href="">
+                                    <li class="mt-3 hover:text-white duration-300">Services</li>
+                                </a>
+                                <a href="">
+                                    <li class="mt-3 hover:text-white duration-300">portfolio</li>
+                                </a>
+                                <a href="" class="mt-3">
+                                    <li class="mt-3 hover:text-white duration-300">blogs</li>
+                                </a>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bol mt-7">Service Links</h2>
+                            <ul class="mt-10 text-gray-300">
+                                <a href="">
+                                    <li class="hover:text-white duration-300">Cloud Service</li>
+                                </a>
+                                <a href="">
+                                    <li class="mt-3 hover:text-white duration-300">Backup Solution</li>
+                                </a>
+                                <a href="">
+                                    <li class="mt-3 hover:text-white duration-300">Network Security</li>
+                                </a>
+                                <a href="">
+                                    <li class="mt-3 hover:text-white duration-300">Monitoring</li>
+                                </a>
+                                <a href="" class="mt-3">
+                                    <li class="mt-3 hover:text-white duration-300">IT Consulting</li>
+                                </a>
+
+                            </ul>
+
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold mt-7">Recent Blog</h2>
+                            <ul class="mt-10 text-gray-300">
+                                <li>
+                                    <div class="flex">
+                                        <div>
+                                            <img src="assets/images/about-5.webp" width="80" height="80" alt="">
+                                        </div>
+                                        <div class="ms-3">
+                                            <a href="">
+                                                <p class=" hover:text-[#b91202]" style="font-size: 17px;">We provide and
+                                                    in
+                                                    range of IT solutions</p>
+                                            </a>
+                                            <div class="flex items-center gap-x-2">
+                                                <svg stroke="currentColor" fill="red" stroke-width="0"
+                                                    viewBox="0 0 448 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z">
+                                                    </path>
+                                                </svg>
+                                                <span>October 19, 2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="flex mt-10">
+                                        <div>
+                                            <img src="assets/images/about-5.webp" width="80" height="80" alt="">
+                                        </div>
+                                        <div class="ms-3">
+                                            <a href="">
+                                                <p class=" hover:text-[#b91202]" style="font-size: 17px;">We provide and
+                                                    in
+                                                    range of IT solutions</p>
+                                            </a>
+                                            <div class="flex items-center gap-x-2">
+                                                <svg stroke="currentColor" fill="red" stroke-width="0"
+                                                    viewBox="0 0 448 512" height="1em" width="1em"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z">
+                                                    </path>
+                                                </svg>
+                                                <span>October 19, 2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold mt-7">Contact Us</h2>
+                            <ul class="text-gray-300 mt-10">
+                                <li>
+                                    <div class="flex items-center gap-x-2 mt-5">
+                                        <svg fill="red" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z">
+                                            </path>
+                                        </svg>
+                                        <a href="">
+                                            <span class="ms-3 hover:text-white duration-300">+880 123 45 67 89</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="flex items-center gap-x-2 mt-5">
+                                        <svg fill="red" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z">
+                                            </path>
+                                        </svg>
+                                        <a href="">
+                                            <span class="ms-3 hover:text-white duration-300">yourmail@gmail.com</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="flex items-center gap-x-2 mt-5">
+                                        <svg fill="red" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                                            </path>
+                                        </svg>
+                                        <a href="" >
+                                        <span class="ms-3 hover:text-white duration-300">1212, Lav Vegas, The Veg Street, USA</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-between flex-col lg:flex-row  border-t-1 mt-4 border-gray-700">
+                        <div class="mt-5">
+                            <p class="text-gray-300  ">© Yoursitename 2024 | All Rights Reserved</p>
+                        </div>
+
+                        <div class="mt-5">
+                            <nav aria-label="social links">
+                                <ul class="inline-flex items-center gap-2.5">
+                                    <li>
+                                        <a target="_blank" aria-label="https://www.facebook.com/"
+                                            class="text-base/[1] -1 w-30px h-30px rounded-5 grid place-items-center rounded  p-2 hover:text-white duration-300 "
+                                            href="https://www.facebook.com/">
+                                            <span>
+                                                Term & condition
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" aria-label="https://www.facebook.com/"
+                                            class="text-base/[1]  w-30px h-30px rounded-5 grid place-items-center rounded  p-2 hover:text-white duration-300 "
+                                            href="https://www.facebook.com/">
+                                            <span>
+                                                privacy policy
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" aria-label="https://www.facebook.com/"
+                                            class="text-base/[1] 1 w-30px h-30px rounded-5 grid rounded place-items-center hover:text-white duration-300  p-2 "
+                                            href="https://www.facebook.com/">
+                                            <span>
+                                                Contact us
+                                            </span>
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+            <!-- footer end -->
+
+
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/flowbite@1.6.6/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+        // Simple JS to toggle menu on mobile
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
