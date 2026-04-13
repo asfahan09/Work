@@ -1,0 +1,158 @@
+
+.after\:bg-current:after {
+    content: var(--tw-content);
+    background-color: currentColor;
+}
+
+.custom-borders {
+    border-bottom: solid 2px rgb(255, 255, 255) !important;
+    width: 50px;
+}
+
+.social-icons:hover {
+    background-color: brown;
+}
+
+.bg-set {
+    background-color: rgb(26, 30, 28);
+}
+
+.bg-set-0 {
+    background-color: rgb(24, 24, 24);
+}
+
+.bg-set-1 {
+    background-color: rgb(33, 33, 36, 1);
+}
+
+.text-color {
+    color: rgb(184, 10, 10);
+}
+
+.custom-shadow {
+    background-color: rgb(26, 30, 28);
+    padding: 1.25rem 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 20px 20px 0px rgb(150, 18, 15, 40);
+
+}
+
+@media (max-width:1025px) {
+    .text-md {
+        text-align: center;
+    }
+
+    .set-content {
+        justify-content: center;
+    }
+}
+
+@keyframes leftRight {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+.animate-left-right {
+    animation: leftRight 3s infinite ease-in-out;
+}
+
+ @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .marquee {
+    animation: marquee 30s linear infinite;
+  }
+ .class-zoom {
+  transform: scale(1.6);
+}
+.splide__arrow {
+   
+    background-color: rgba(185, 18, 2, 0.2) !important; 
+height: 50px !important;
+width: 50px !important;
+/* top: 35px !important; */
+
+
+}
+
+.icon-bg{
+     background-color: rgba(0, 0, 0, 0.2) !important;
+}
+.animate-rotate-me {
+    animation: rotate-me 25s linear infinite;
+}
+
+@keyframes rotate-me {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-top-bottom {
+    animation: topbottom 3s infinite ease-in-out;
+}
+
+@keyframes topbottom {
+
+    0%,
+    100% {
+        transform: translateY();
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+   .my-carousel-progress {
+  background-color: #18181b; /* dark gray/black background */
+  height: 10px;
+  width: 25%;
+  border-radius: 9999px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.my-carousel-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #d01800; /* red color */
+  transition: width 0.3s ease;
+  border-radius: 9999px;
+}
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 70s linear infinite;
+  width: max-content;
+}
+#drawer-example::-webkit-scrollbar {
+  display: none;
+}
+#drawer-example {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+html {
+  scroll-behavior: smooth;
+}
+  .shadow-red-bottom {
+    box-shadow: 0 6px 15px -5px rgba(185, 18, 2, 0.7); /* custom red glow/shadow */
+  }
